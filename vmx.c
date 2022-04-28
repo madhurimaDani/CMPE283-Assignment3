@@ -72,7 +72,7 @@ MODULE_LICENSE("GPL");
 
 /* CMPE 283 Assignment 3 Changes */
 extern u32 exitCount[69];
-extern u64 timeSpentExits[69];
+extern u64 exitDuration[69];
 
 /* CMPE 283 Assignment 2 Changes */
 extern u32 overallExits;
@@ -6197,7 +6197,7 @@ exit_handler_index = array_index_nospec((u16)exit_reason.basic,
     overallTime = rdtsc() - startTime;
 
 	timeSpentExits = overallTime  + timeSpentExits;
-    timeSpentExits[(int)exit_handler_index] = (overallTime + timeSpentExits[(int)exit_handler_index]);
+    exitDuration[(int)exit_handler_index] = (overallTime + exitDuration[(int)exit_handler_index]);
 
 	return exitHandler;
 
