@@ -100,20 +100,10 @@ boot entail?
  
 - Of the exit types defined in the SDM, which are the most frequent? Least?
     - Below were the most frequent exits:
-      -  Exit Number	Exit Reason
-          10	        CPUID
-          30	        I/O Instruction
-          32	        MSR access
-          1	        External Interrupt
-          28	        Control Register Acesses
-          48	        EPT Violation
-          49	        EPT Misconfiguration
-          7	        Interrupt Window
-          12	        HLT
-          0	        Exception
+
+      <img width="338" alt="image" src="https://user-images.githubusercontent.com/51197183/166074306-30118d48-f0e7-4746-b928-64e963091115.png">
+
     - Most of the exits didn't occur at all. Below are least frequent exit type along with the remaining others:
-      -  Exit Number	Exit Reason
-          54	        WBINVD or WBNOINVD
-          29	        MOV DR
-          55	        XSETBV
-          44	        APIC Access
+      
+      <img width="337" alt="image" src="https://user-images.githubusercontent.com/51197183/166074499-55c5e531-261c-4ab1-abd5-6cb905be65c5.png">
+
