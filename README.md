@@ -89,7 +89,7 @@ boot entail?
 - Of the exit types defined in the SDM, which are the most frequent? Least?
     - Below were the most frequent exits:
       -  Exit Number	Exit Reason
-          10	        CPUID
+         110	        CPUID
           30	        I/O Instruction
           32	        MSR access
           1	        External Interrupt
