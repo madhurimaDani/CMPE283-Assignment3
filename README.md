@@ -13,7 +13,7 @@
   - Discussed on assignment questions and answers
 - Shreemathi
   - Understood code changes required for assignment 3
-  - Used my assignment 2's base files for cpuid.c and vmx.c and updated them for assignment 3
+  - Used our assignment 2's base files for cpuid.c and vmx.c and updated them for assignment 3
   - Discussed on assignment questions and answers
   - Created documentation and updated README.md
 
@@ -96,13 +96,13 @@ boot entail?
           10	        CPUID
           30	        I/O Instruction
           32	        MSR access
-          1	          External Interrupt
+          1	        External Interrupt
           28	        Control Register Acesses
           48	        EPT Violation
           49	        EPT Misconfiguration
-          7	          Interrupt Window
+          7	        Interrupt Window
           12	        HLT
-          0	          Exception
+          0	        Exception
     - Most of the exits didn't occur at all. Below are least frequent exit type along with the remaining others:
       -  Exit Number	Exit Reason
           54	        WBINVD or WBNOINVD
