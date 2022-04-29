@@ -83,7 +83,6 @@
 
 
 ### [3] Questions
-
 - Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there 
 more exits performed during certain VM operations? Approximately how many exits does a full VM 
 boot entail?
@@ -109,12 +108,3 @@ boot entail?
           29	        MOV DR
           55	        XSETBV
           44	        APIC Access
-
-
-
-
-
-
-
-
-
