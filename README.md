@@ -26,20 +26,24 @@
       --graphics none  --location=/home/mdani/CentOS-7-x86_64-DVD-2009.iso \
       --extra-args="console=tty0 console=ttyS0,115200"  --check all=off
   -  Completed bootup steps of inner VM as guided on screen
+  
   <img width="771" alt="image" src="https://user-images.githubusercontent.com/51197183/165874170-21912b89-9d87-4419-9e88-419147cb59ad.png">
 
 
 -  Updated cpuid.c and vmx.c files for leaf node %eax=0x4FFFFFFD and %eax=0x4FFFFFFC in local machine and pushed the changes to git
 -  In VM, cloned assignement 3 repository to get updated files
+
 <img width="1098" alt="Screen Shot 2022-04-27 at 9 04 22 PM" src="https://user-images.githubusercontent.com/51197183/165873322-ab7cd28b-13b1-45d7-bf31-19fa6b6596a1.png">
 
 -  In VM, cloned assignement 3 repository to get updated files
 -  Entered into bash mode: sudo bash
 -  From linux directory, executed:  make -j 8 modules
+
 <img width="734" alt="Screen Shot 2022-04-27 at 9 19 32 PM" src="https://user-images.githubusercontent.com/51197183/165873460-b9023106-d816-447d-84cd-4478900b012c.png">
 
 -  From linux directory, executed:  make -j 8 modules
 -  make INSTALL_MOD_STRIP=1 modules_install && make install
+
 <img width="1345" alt="Screen Shot 2022-04-27 at 9 21 50 PM" src="https://user-images.githubusercontent.com/51197183/165873640-5410319d-8527-43ec-83ea-c41d5c9a98b2.png">
 
 -  Searched for kvm file: lsmod | grep kvm 
@@ -48,14 +52,17 @@
 -  modprobe kvm
 -  modprobe kvm_intel
 -  lsmod | grep kvm
+
 <img width="749" alt="Screen Shot 2022-04-27 at 9 23 14 PM" src="https://user-images.githubusercontent.com/51197183/165873834-f05a1178-8488-47d3-b62a-a1202ae118c7.png">
 
 -  Start the inner VM: sudo virsh start madhurimaCentOS
 - Open console for inner VM: sudo virsh console madhurimaCentOS
+
 <img width="428" alt="image" src="https://user-images.githubusercontent.com/51197183/165874413-8583e41e-6ea7-49d0-b6af-8f92db373070.png">
 
 - Executed one sample case in inner VM: cpuid -l 0x4ffffffd -s 10
 - Got error that cpuid is not installed, so installed it via yum: yum -y install cpuid
+
 <img width="1101" alt="Screen Shot 2022-04-27 at 9 50 36 PM" src="https://user-images.githubusercontent.com/51197183/165874755-d4f296ac-aebb-4b83-98d1-e3d03985ae83.png">
 
 - Tried executing with random exit numbers and checked corresponding messages in outher VM using dmesg:
@@ -64,20 +71,25 @@
 
 - Created a command.sh file in inner VM and wrote cpuid -l 0x4ffffffd -s X instructions from x = 0 to 69
 - Executed command file: ./command.sh
+
 <img width="535" alt="Screen Shot 2022-04-27 at 10 21 15 PM" src="https://user-images.githubusercontent.com/51197183/165875138-97162f66-8428-4b9f-9472-1d66608cdfc4.png">
 
 - In outer VM, checked messages using command: dmesg
+
 <img width="723" alt="image" src="https://user-images.githubusercontent.com/51197183/165879173-0d84eced-860e-4ec3-af5b-aabd836247ab.png">
 
 
 - Rebooted inner VM: reboot
+
 <img width="1359" alt="Screen Shot 2022-04-27 at 10 21 40 PM" src="https://user-images.githubusercontent.com/51197183/165875447-1c7d9e17-1b21-4746-ab12-ba21268bd940.png">
 
 
 - Logged into inner VM as it came up and executed command file again
+
 <img width="887" alt="Screen Shot 2022-04-27 at 10 21 56 PM" src="https://user-images.githubusercontent.com/51197183/165875518-87fc722b-5fe8-4eb3-8c02-ea9e744607ec.png">
 
 - Checked messages in outer VM using command: dmesg
+
 <img width="443" alt="image" src="https://user-images.githubusercontent.com/51197183/165879204-54a1bb08-de46-4518-b08c-57ea7126e1c0.png">
 
 ### [3] Questions
