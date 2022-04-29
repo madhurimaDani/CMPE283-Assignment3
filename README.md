@@ -10,15 +10,14 @@
   - Understood that CentOS kernel is easy to work with, hence gathered steps to spin up a CentOS kernel
   - Pushed final files into git and cloned them into VM
   - Executed steps required in outer and inner VM and collected snippets
-  - Discussed on assignment questions and answers
+  - Discussed assignment questions and answers
 - Shreemathi
   - Understood code changes required for assignment 3
-  - Used our assignment 2's base files for cpuid.c and vmx.c and updated them for assignment 3
+  - Used our assignment 2's base files for cpuid.c and vmx.c and updated them accordingly for assignment 3
   - Discussed on assignment questions and answers
   - Created documentation and updated README.md
 
 ### [2] Steps Followed
-
 - For Assignment 3, we used centOS as inner VM instead of ubuntu as done for assignment 2
   -  Downloaded a CentOS iso file and executed below command to create domain
       virt-install  --network bridge:virbr0 --name madhurimaCentOS \
@@ -81,14 +80,12 @@
 - Checked messages in outer VM using command: dmesg
 <img width="443" alt="image" src="https://user-images.githubusercontent.com/51197183/165879204-54a1bb08-de46-4518-b08c-57ea7126e1c0.png">
 
-
 ### [3] Questions
 - Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there 
 more exits performed during certain VM operations? Approximately how many exits does a full VM 
 boot entail?
     - The frequency of exits kept increasing steadily not necessarily a linear rise (Refer exits for exit# 1 from snippets pasted above). Observed significant increase in exit numbers after rebooting the inner VM. After a full VM boot, approximately 3973521 exits occurred.
-
-  
+ 
 - Of the exit types defined in the SDM, which are the most frequent? Least?
     - Below were the most frequent exits:
       -  Exit Number	Exit Reason
